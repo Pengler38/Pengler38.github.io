@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<!-- Looking for the source code? -->
+<!-- The banner at the top of the page is Rust compiled to wasm, the source code is at: https://github.com/Pengler38/wasm-wgpu -->
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Preston E's Website</title>
+<link rel="modulepreload" href="/wasm-wgpu-e2983c419e849695.js" crossorigin="anonymous" integrity="sha384-tEOS5jyZq8/Kw4WR8YUsYUWPjStZkSYkG5XND2R3y+Qssxxh5+KyOioR09yukHBg"><link rel="preload" href="/wasm-wgpu-e2983c419e849695_bg.wasm" crossorigin="anonymous" integrity="sha384-dEjaW0E6agpjP2Yao4ac1qHOdm03R9y/6DyzsEqUiw6iCGGe8UFoUAM81w31OyWX" as="fetch" type="application/wasm"></head>
+<body>
+  <canvas id="canvas" width=1280 height=320></canvas>
+  <p><a id="linecount_element" href="https://github.com/Pengler38/wasm-wgpu" title="Source code of the banner">I Wrote ____ Lines Of Rust And All I Got Was This Measly HTML Canvas Element</a></p>
+
+<script type="module">
+import init, * as bindings from '/wasm-wgpu-e2983c419e849695.js';
+const wasm = await init({ module_or_path: '/wasm-wgpu-e2983c419e849695_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>
