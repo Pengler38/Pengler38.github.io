@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<!-- Looking for the source code? -->
+<!-- This is made with Rust + wasm, so it unfortunately doesn't get served to browsers. -->
+<!-- Check out the actual source at my github: https://github.com/Pengler38 -->
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>test website</title>
+<link rel="modulepreload" href="/wasm-wgpu-707f716fbb7b07ee.js" crossorigin="anonymous" integrity="sha384-eq4Emnh14hcSYDpRvnnunHJuqeaM6Yfp7D5X0GSQnr+oj9byYifK2NZgNTL7lB2i"><link rel="preload" href="/wasm-wgpu-707f716fbb7b07ee_bg.wasm" crossorigin="anonymous" integrity="sha384-/fDtrQeKnwJOTyGEKar+2niwVtqGo/AMCykyoQYvCAZ2R/+INxuDer0+Lb7Iul6J" as="fetch" type="application/wasm"></head>
+<body>
+  <canvas id="canvas" width=1280 height=320></canvas>
+  <h1 id="linecount_heading">I Wrote ____ Lines Of Rust And All I Got Was This Measly HTML Canvas Element</h1>
+
+<script type="module">
+import init, * as bindings from '/wasm-wgpu-707f716fbb7b07ee.js';
+const wasm = await init({ module_or_path: '/wasm-wgpu-707f716fbb7b07ee_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>
