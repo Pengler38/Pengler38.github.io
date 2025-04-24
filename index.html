@@ -6,11 +6,39 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <title>Preston E's Website</title>
-<link rel="modulepreload" href="/wasm-wgpu-e2983c419e849695.js" crossorigin="anonymous" integrity="sha384-tEOS5jyZq8/Kw4WR8YUsYUWPjStZkSYkG5XND2R3y+Qssxxh5+KyOioR09yukHBg"><link rel="preload" href="/wasm-wgpu-e2983c419e849695_bg.wasm" crossorigin="anonymous" integrity="sha384-dEjaW0E6agpjP2Yao4ac1qHOdm03R9y/6DyzsEqUiw6iCGGe8UFoUAM81w31OyWX" as="fetch" type="application/wasm"></head>
+  <title>Preston Engler's Website</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="modulepreload" href="/wasm-wgpu-e2983c419e849695.js" crossorigin="anonymous" integrity="sha384-tEOS5jyZq8/Kw4WR8YUsYUWPjStZkSYkG5XND2R3y+Qssxxh5+KyOioR09yukHBg"><link rel="preload" href="/wasm-wgpu-e2983c419e849695_bg.wasm" crossorigin="anonymous" integrity="sha384-dEjaW0E6agpjP2Yao4ac1qHOdm03R9y/6DyzsEqUiw6iCGGe8UFoUAM81w31OyWX" as="fetch" type="application/wasm">
+</head>
 <body>
-  <canvas id="canvas" width=1280 height=320></canvas>
-  <p><a id="linecount_element" href="https://github.com/Pengler38/wasm-wgpu" title="Source code of the banner">I Wrote ____ Lines Of Rust And All I Got Was This Measly HTML Canvas Element</a></p>
+  <div class="center">
+    <a id="linecount_element" href="https://github.com/Pengler38/wasm-wgpu" title="Source code for the Hello World banner">I Wrote ____ Lines Of Rust And All I Got Was This Measly HTML Canvas Element</a>
+  </div>
+  <canvas id="canvas" width=1280 height=320> This is intended to be a 3D "Hello World" banner </canvas>
+  <hr>
+  <h1>About Me</h1>
+  <hr>
+  <br>
+  <p>I'm Preston Engler, a Software Engineer.<br> I like to program.</p>
+  <p>I have a mild interest in computer graphics and modern programming languages. Currently I work in the Automotive industry doing embedded programming.</p>
+  <h3>About the Hello World banner</h3>
+  <p>
+    The banner at the top of the page is one of my recent projects; I programmed it in Rust
+    using wgpu, a low-level graphics API (between OpenGL and Vulkan). It uses wgpu's webgl backend and compiles to wasm to be run on browsers.
+  </p>
+  <p>
+    It uses zero assets: The 3d models and textures are fully generated with code I wrote. This wasn't the hardest challenge, but it was
+    fun to do everything in code instead of using outside tools. After all, the point of the project was coding and experimentation, so I would call it a
+    resounding success. Computer graphics is a complicated topic and with enough research and elbow grease, I was able to make it work.
+  </p>
+  <p>
+    If you haven't already tried, mouse over the banner or touch it on mobile and the letters will deform. I spent a good amount of time tweaking
+    the numbers and math equations behind the deformations to make it satisfying.
+  </p>
+  <br>
+  <hr>
+  <p>If you're interested in my resume, or just want to send a message, feel free to email me at <a href="mailto:pengler44@gmail.com">pengler44@gmail.com</a></p>
+  <a href="https://github.com/Pengler38">Github</a>
 
 <script type="module">
 import init, * as bindings from '/wasm-wgpu-e2983c419e849695.js';
@@ -22,5 +50,6 @@ window.wasmBindings = bindings;
 
 dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
 
-</script></body>
+</script>
+</body>
 </html>

@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  padding: 1em;
+  margin: 2em auto;
+  line-height: 1.5;
+}
+
+canvas {
+  position: relative;
+  left: -240px; /* This value seems to work well? Not sure why */
+  top: 0;
+}
+
+h1 {
+  text-align: center;
+  margin: 5px;
+}
+
+.center {
+  text-align: center;
+}
+
+#linecount_element {
+  font-size: 12px;
+}
