@@ -24,3 +24,7 @@ h1 {
 #linecount_element {
   font-size: 12px;
 }
+
+p {
+  margin: 2em 0;
+}
