@@ -8,8 +8,7 @@
   <meta charset="utf-8"/>
   <title>Preston Engler's Website</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="modulepreload" href="/wasm-wgpu-e2983c419e849695.js" crossorigin="anonymous" integrity="sha384-tEOS5jyZq8/Kw4WR8YUsYUWPjStZkSYkG5XND2R3y+Qssxxh5+KyOioR09yukHBg"><link rel="preload" href="/wasm-wgpu-e2983c419e849695_bg.wasm" crossorigin="anonymous" integrity="sha384-dEjaW0E6agpjP2Yao4ac1qHOdm03R9y/6DyzsEqUiw6iCGGe8UFoUAM81w31OyWX" as="fetch" type="application/wasm">
-</head>
+  <link rel="modulepreload" href="/wasm-wgpu-88061a66c8d0ed.js" crossorigin="anonymous" integrity="sha384-T0eUGC3ZcItHFKroyrMrHyMmJsarvqvHWBw1A9tqiOweB5di6Fkds/i03EvM63OK"><link rel="preload" href="/wasm-wgpu-88061a66c8d0ed_bg.wasm" crossorigin="anonymous" integrity="sha384-K6NTIhaeHAXC7/Yn72KUJn/oASUD4t9lorfZfkc0OmTxJ/WCzWaOzWJZDWKDyHZd" as="fetch" type="application/wasm">
 <body>
   <div class="center">
     <a id="linecount_element" href="https://github.com/Pengler38/wasm-wgpu" title="Source code for the Hello World banner">I Wrote ____ Lines Of Rust And All I Got Was This Measly HTML Canvas Element</a>
@@ -45,8 +44,8 @@
   <a href="https://github.com/Pengler38">Github</a>
 
 <script type="module">
-import init, * as bindings from '/wasm-wgpu-e2983c419e849695.js';
-const wasm = await init({ module_or_path: '/wasm-wgpu-e2983c419e849695_bg.wasm' });
+import init, * as bindings from '/wasm-wgpu-88061a66c8d0ed.js';
+const wasm = await init({ module_or_path: '/wasm-wgpu-88061a66c8d0ed_bg.wasm' });
 
 
 window.wasmBindings = bindings;
