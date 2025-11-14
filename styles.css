@@ -26,5 +26,9 @@ h1 {
 }
 
 p {
-  margin: 2em 0;
+  margin: 1.5em 0;
+}
+
+ul {
+  margin-top: -1em;
 }
